@@ -1,0 +1,634 @@
+卷 OS 的文件夹 PATH 列表
+卷序列号为 B686-BAAC
+C:.
+│  .gitignore
+│  deploy.sh
+│  docker.md
+│  docker.sh
+│  Dockerfile
+│  gpu-guides.md
+│  LICENCE
+│  README.md
+│  requirements.txt
+│  setup.py
+│  setup.sh
+│  tmp.wav
+│  tree.txt
+│  
+├─base_utils
+│  │  CMakeLists.txt
+│  │  
+│  ├─include
+│  │  │  android_utils.h
+│  │  │  base.h
+│  │  │  debug.h
+│  │  │  file_utils.h
+│  │  │  image_utils.h
+│  │  │  math_utils.h
+│  │  │  
+│  │  └─filter
+│  │          kalman_filter.h
+│  │          mean_filter.h
+│  │          motion_filter.h
+│  │          tracking_flow.h
+│  │          
+│  └─src
+│      │  debug.cpp
+│      │  file_utils.cpp
+│      │  image_utils.cpp
+│      │  math_utils.cpp
+│      │  
+│      └─filter
+│              kalman_filter.cpp
+│              mean_filter.cpp
+│              motion_filter.cpp
+│              tracking_flow.cpp
+│              
+├─cmakelists
+│      qt.txt
+│      qt_opencv_opengl.txt
+│      
+├─data
+│  │  ai.jpg
+│  │  boxes.txt
+│  │  mask.jpg
+│  │  merge_person.json
+│  │  person.json
+│  │  scores.txt
+│  │  test.png
+│  │  write_contents.txt
+│  │  胡歌-0001.jpg
+│  │  
+│  ├─audio
+│  │      bus.pcm
+│  │      bus.wav
+│  │      bus_chinese.wav
+│  │      bus_chinese1.wav
+│  │      long_audio.wav
+│  │      test1.pcm
+│  │      test1.wav
+│  │      
+│  ├─camera
+│  │      Left1.bmp
+│  │      Left2.bmp
+│  │      Right1.bmp
+│  │      Right2.bmp
+│  │      
+│  ├─coco
+│  │  │  coco_ins.json
+│  │  │  coco_kps.json
+│  │  │  file_list.txt
+│  │  │  
+│  │  ├─Annotations
+│  │  │      test0.xml
+│  │  │      test1.xml
+│  │  │      test2.xml
+│  │  │      test3.xml
+│  │  │      test5.xml
+│  │  │      test6.xml
+│  │  │      test7.xml
+│  │  │      
+│  │  ├─JPEGImages
+│  │  │      test0.png
+│  │  │      test1.jpg
+│  │  │      test2.jpg
+│  │  │      test3.png
+│  │  │      test4.png
+│  │  │      test5.png
+│  │  │      test6.png
+│  │  │      test7.png
+│  │  │      
+│  │  ├─json
+│  │  │      test0.json
+│  │  │      test1.json
+│  │  │      test2.json
+│  │  │      test3.json
+│  │  │      test5.json
+│  │  │      test6.json
+│  │  │      test7.json
+│  │  │      
+│  │  ├─labels
+│  │  │      test0.txt
+│  │  │      test1.txt
+│  │  │      test2.txt
+│  │  │      test3.txt
+│  │  │      test5.txt
+│  │  │      test6.txt
+│  │  │      test7.txt
+│  │  │      
+│  │  └─yolo
+│  │      ├─images
+│  │      │  └─train
+│  │      │          test0.png
+│  │      │          test1.jpg
+│  │      │          test2.jpg
+│  │      │          test3.png
+│  │      │          test4.png
+│  │      │          test5.png
+│  │      │          test6.png
+│  │      │          test7.png
+│  │      │          
+│  │      ├─labels
+│  │      │  │  train.cache
+│  │      │  │  
+│  │      │  └─train
+│  │      │          test0.txt
+│  │      │          test1.txt
+│  │      │          test2.txt
+│  │      │          test3.txt
+│  │      │          test5.txt
+│  │      │          test6.txt
+│  │      │          test7.txt
+│  │      │          
+│  │      └─labels_box
+│  │          │  train.cache
+│  │          │  
+│  │          └─train
+│  │                  test0.txt
+│  │                  test1.txt
+│  │                  test2.txt
+│  │                  test3.txt
+│  │                  test5.txt
+│  │                  test6.txt
+│  │                  test7.txt
+│  │                  
+│  ├─labelme
+│  │      mask.jpg
+│  │      mask.json
+│  │      
+│  ├─person
+│  │      test0.png
+│  │      test1.jpg
+│  │      test1.json
+│  │      test2.jpg
+│  │      test2.json
+│  │      test3.json
+│  │      test3.png
+│  │      
+│  ├─test_image
+│  │      grid1.png
+│  │      grid2.png
+│  │      grid3.png
+│  │      grid4.png
+│  │      test1.jpg
+│  │      test2.jpg
+│  │      test3.jpg
+│  │      test4.jpg
+│  │      
+│  ├─video
+│  │      kunkun_cut.mp3
+│  │      kunkun_cut.mp4
+│  │      test-video-result.mp4
+│  │      test-video.mp4
+│  │      
+│  └─VOC2007
+│      │  voc_coco_demo.json
+│      │  
+│      ├─Annotations
+│      │      000000.xml
+│      │      000001.xml
+│      │      000002.xml
+│      │      000003.xml
+│      │      000004.xml
+│      │      000005.xml
+│      │      000006.xml
+│      │      000007.xml
+│      │      000008.xml
+│      │      000009.xml
+│      │      000010.xml
+│      │      000032.xml
+│      │      000033.xml
+│      │      000039.xml
+│      │      
+│      ├─JPEGImages
+│      │      000000.jpg
+│      │      000001.jpg
+│      │      000002.jpg
+│      │      000003.jpg
+│      │      000004.jpg
+│      │      000005.jpg
+│      │      000006.jpg
+│      │      000007.jpg
+│      │      000008.jpg
+│      │      000009.jpg
+│      │      000010.jpg
+│      │      000032.jpg
+│      │      000033.jpg
+│      │      000039.jpg
+│      │      
+│      ├─labels
+│      │      000001.txt
+│      │      000002.txt
+│      │      000003.txt
+│      │      000004.txt
+│      │      000005.txt
+│      │      000006.txt
+│      │      000007.txt
+│      │      000008.txt
+│      │      000009.txt
+│      │      000010.txt
+│      │      
+│      └─SegmentationObject
+│              000032.png
+│              000033.png
+│              000039.png
+│              
+├─docs
+│  │  confusion_matrix.png
+│  │  csdn0.html
+│  │  csdn1.html
+│  │  git-guide.md
+│  │  README.md
+│  │  requirements_py36.txt
+│  │  requirements_py38.txt
+│  │  
+│  └─关键点示意图
+│      │  COCO人体关键点17-示意图.png
+│      │  COCO人体关键点17-示意图颜色.png
+│      │  COCO人体关键点17-示意图颜色.ppt
+│      │  MPII人体关键点16-示意图.png
+│      │  README.md
+│      │  手部关键点21-示意图1.png
+│      │  手部关键点21-示意图2.png
+│      │  手部关键点21-示意图3.png
+│      │  
+│      └─docs
+│              coco.png
+│              mpii.png
+│              
+├─pybaseutils
+│  │  base64_utils.py
+│  │  batch_utils.py
+│  │  color_utils.py
+│  │  config_utils.py
+│  │  coords_utils.py
+│  │  file_utils.py
+│  │  font_utils.py
+│  │  geometry_tools.py
+│  │  heatmap_utils.py
+│  │  image_utils.py
+│  │  json_utils.py
+│  │  log.py
+│  │  logger.py
+│  │  numpy_utils.py
+│  │  pandas_utils.py
+│  │  plot_utils.py
+│  │  setup_config.py
+│  │  singleton_utils.py
+│  │  thread_utils.py
+│  │  time_utils.py
+│  │  tracemalloc_utils.py
+│  │  tracemalloc_utils2.py
+│  │  word_utils.py
+│  │  worker.py
+│  │  yaml_utils.py
+│  │  __init__.py
+│  │  
+│  ├─audio
+│  │      audio_utils.py
+│  │      install.sh
+│  │      pyaudio_utils.py
+│  │      vad_utils.py
+│  │      __init__.py
+│  │      
+│  ├─build_utils
+│  │      cython_utils.py
+│  │      pyarmor_utils.py
+│  │      __init__.py
+│  │      
+│  ├─cluster
+│  │      kmean.py
+│  │      maxmin_distance.py
+│  │      similarity.py
+│  │      __init__.py
+│  │      
+│  ├─converter
+│  │      build_coco.py
+│  │      build_labelme.py
+│  │      build_voc.py
+│  │      concat_coco.py
+│  │      convert_coco2voc.py
+│  │      convert_labelme2coco.py
+│  │      convert_labelme2voc.py
+│  │      convert_labelme2yolo.py
+│  │      convert_voc2coco.py
+│  │      convert_voc2voc.py
+│  │      convert_voc2yolo.py
+│  │      convert_yolo2voc.py
+│  │      __init__.py
+│  │      
+│  ├─cvutils
+│  │      corner_utils.py
+│  │      monitor.py
+│  │      mouse_utils.py
+│  │      video_utils.py
+│  │      __init__.py
+│  │      
+│  ├─dataloader
+│  │      base_coco.py
+│  │      base_dataset.py
+│  │      parser_coco_det.py
+│  │      parser_coco_ins.py
+│  │      parser_coco_kps.py
+│  │      parser_labelme.py
+│  │      parser_voc.py
+│  │      parser_yolo.py
+│  │      voc_seg_utils.py
+│  │      __init__.py
+│  │      
+│  ├─filter
+│  │      demo.py
+│  │      kalman_filter.py
+│  │      mean_filter.py
+│  │      motion_filter.py
+│  │      pose_filter.py
+│  │      QueueTable.py
+│  │      README.md
+│  │      __init__.py
+│  │      
+│  ├─font_style
+│  │      simfang.ttf
+│  │      simhei.ttf
+│  │      simkai.ttf
+│  │      simsun.ttc
+│  │      __init__.py
+│  │      方正粗黑宋简体.ttf
+│  │      
+│  ├─metrics
+│  │      accuracy.py
+│  │      average_meter.py
+│  │      class_report.py
+│  │      confuse.csv
+│  │      plot_pr.py
+│  │      plot_roc.py
+│  │      __init__.py
+│  │      
+│  ├─pose
+│  │      bones_utils.py
+│  │      human_pose.py
+│  │      pose_utils.py
+│  │      __init__.py
+│  │      
+│  ├─pycpp
+│  │  │  build.sh
+│  │  │  CMakeLists.txt
+│  │  │  demo.py
+│  │  │  image.png
+│  │  │  main.cpp
+│  │  │  main.py
+│  │  │  README.md
+│  │  │  test.png
+│  │  │  __init__.py
+│  │  │  
+│  │  ├─docs
+│  │  │      C和ctypes的类型.png
+│  │  │      
+│  │  └─src
+│  │          ctypes_utils.cpp
+│  │          ctypes_utils.h
+│  │          
+│  ├─server
+│  │      apm_server.py
+│  │      __init__.py
+│  │      
+│  ├─tracking
+│  │      demo.py
+│  │      kalman_filter.py
+│  │      mean_filter.py
+│  │      motion_filter.py
+│  │      pose_filter.py
+│  │      QueueTable.py
+│  │      README.md
+│  │      __init__.py
+│  │      
+│  └─transforms
+│          affine_transform.py
+│          test.jpg
+│          __init__.py
+│          
+├─test_cpp
+│  │  build.sh
+│  │  CMakeLists.txt
+│  │  filter_test.cpp
+│  │  main.cpp
+│  │  opencl_test.cpp
+│  │  openmp_test.cpp
+│  │  README.md
+│  │  
+│  ├─contrib
+│  │  └─base_cl
+│  │      │  CMakeLists.txt
+│  │      │  README.md
+│  │      │  
+│  │      ├─include
+│  │      │      cl_info.h
+│  │      │      Convolution.h
+│  │      │      HelloWorld.h
+│  │      │      HelloWorld_str.h
+│  │      │      
+│  │      ├─kernel
+│  │      │      Convolution.cl
+│  │      │      HelloWorld.cl
+│  │      │      HelloWorld_Kernel.cl
+│  │      │      
+│  │      └─src
+│  │              cl_info.cpp
+│  │              
+│  ├─filter
+│  │      pose_filter1.cpp
+│  │      pose_filter1.h
+│  │      Types1.h
+│  │      
+│  ├─opencv
+│  │      opencv_nms.cpp
+│  │      README.md
+│  │      stereo_match_bm.cpp
+│  │      stereo_match_sgbm.cpp
+│  │      
+│  └─qt
+│      │  CMakeLists.txt
+│      │  README.md
+│      │  
+│      ├─assets
+│      │  └─ui
+│      │          mainwindow.ui
+│      │          
+│      └─src
+│              main.cpp
+│              mainwindow.cpp
+│              mainwindow.h
+│              
+└─test_py
+    │  class_attribute.py
+    │  class_names.py
+    │  demo.ipynb
+    │  demo1.py
+    │  demo2.py
+    │  demo3.py
+    │  demo_async_await1.py
+    │  demo_async_await2.py
+    │  demo_coco_vis.py
+    │  demo_copy_files.py
+    │  demo_copy_files_for_voc.py
+    │  demo_ffmpy.py
+    │  demo_for_trt.py
+    │  demo_get_file_list.py
+    │  demo_gif.py
+    │  demo_gif_video.py
+    │  demo_labelme.py
+    │  demo_metrics.py
+    │  demo_mouse.py
+    │  demo_nii.py
+    │  demo_pandas.py
+    │  demo_plot.py
+    │  demo_rename.py
+    │  demo_standard_image .py
+    │  demo_standard_video .py
+    │  demo_taichi.py
+    │  demo_video.py
+    │  demo_voc_crop.py
+    │  demo_voc_vis.py
+    │  demo_word_similar.py
+    │  demo_worker1.py
+    │  demo_worker2.py
+    │  kafka_worker.py
+    │  men_tracemalloc.py
+    │  performance.py
+    │  tongyici_tihuan.txt
+    │  __init__.py
+    │  
+    ├─aije
+    │      convert_labelme2coco.py
+    │      convert_labelme2voc.py
+    │      demo2.py
+    │      demo_video_aije.py
+    │      demo_voc_crop.py
+    │      demo_voc_vis.py
+    │      video_demo.py
+    │      __init__.py
+    │      
+    ├─audio
+    │      demo.py
+    │      main.py
+    │      main_read.py
+    │      segment.py
+    │      seg_data.wav
+    │      speechbrain_asr_indoor_prod.py
+    │      speechbrain_demo.py
+    │      tmp.wav
+    │      __init__.py
+    │      
+    ├─converter
+    │      AffectNet.py
+    │      AsianMovie.py
+    │      BITVehicle2voc.py
+    │      BSTLD2voc.py
+    │      CCPD.py
+    │      CCPD2voc.py
+    │      concat_coco.py
+    │      convert_coco2voc.py
+    │      convert_gesture2hand.py
+    │      convert_labelme2coco.py
+    │      convert_labelme2voc.py
+    │      fatigue_driving.py
+    │      fdd_dataset.py
+    │      FL3D_dataset.py
+    │      FreiHAND2coco.py
+    │      handpose2coco.py
+    │      insects_for_aichallenger.py
+    │      TT100K.py
+    │      tt100k_utils.py
+    │      ua_detrac2voc.py
+    │      __init__.py
+    │      
+    ├─cython_build
+    │      build_cython.py
+    │      build_pyarmor.py
+    │      cryptography_demo.py
+    │      deploy.sh
+    │      fun_sum.py
+    │      main.py
+    │      main.spec
+    │      model_des_enctypt.py
+    │      model_enctypt.py
+    │      pyinstaller.sh
+    │      test.png
+    │      test1.png
+    │      test2.png
+    │      __init__.py
+    │      
+    ├─detector
+    │      demo.py
+    │      detect_face_person.py
+    │      predet_labelme.py
+    │      __init__.py
+    │      
+    ├─edit_distance
+    │      demo.py
+    │      text_matching.py
+    │      text_utils.py
+    │      __init__.py
+    │      
+    ├─exam_titile
+    │      demo.py
+    │      tmp.txt
+    │      
+    ├─flask_demo
+    │  │  func.py
+    │  │  index.html
+    │  │  main.css
+    │  │  result.html
+    │  │  server.py
+    │  │  __init__.py
+    │  │  
+    │  └─static
+    │      │  ldh_output.jpg
+    │      │  
+    │      └─upload
+    │              0001.jpg
+    │              ai.jpg
+    │              ai.webp
+    │              
+    ├─image_correction
+    │      demo_correction_v1.py
+    │      demo_correction_v2.py
+    │      demo_correction_v3.py
+    │      __init__.py
+    │      
+    ├─kafka_test
+    │  │  consumer.py
+    │  │  producer.py
+    │  │  topic.py
+    │  │  
+    │  └─data
+    │          test1.jpg
+    │          
+    ├─pose
+    │      human_pose.py
+    │      pose.jpg
+    │      __init__.py
+    │      
+    ├─registry
+    │      base.py
+    │      component.py
+    │      main.py
+    │      register.py
+    │      __init__.py
+    │      
+    ├─socket_server
+    │      receive_server.py
+    │      sent_server.py
+    │      
+    ├─speech
+    │      0001.txt
+    │      0001_000.wav
+    │      azure_tts.py
+    │      dmai_tts.py
+    │      README.md
+    │      test.wav
+    │      
+    └─WebCrawler
+            search_image.py
+            search_image_for_baidu.py
+            __init__.py
+            

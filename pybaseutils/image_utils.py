@@ -1477,6 +1477,7 @@ def draw_image_points_arrowed_lines(image, points,
 
 
 def draw_image_lines(image, points, pointline=[], color=(0, 0, 255), thickness=2):
+    print("enter draw_image_lines")
     # points = np.asarray(points, dtype=np.int32)
     if pointline == "auto" or pointline == []:
         pointline = circle_line(len(points), iscircle=True)
@@ -1547,7 +1548,7 @@ def draw_image_fillPoly(image, points, color=(0, 0, 255)):
     return image
 
 
-def circle_line(num_point, iscircle=True):
+def circle_line(num_point, iscircle=False):
     """
     产生连接线的点,用于绘制连接线
     points_line=circle_line(len(points),iscircle=True)
@@ -1560,9 +1561,9 @@ def circle_line(num_point, iscircle=True):
     end = num_point - 1
     points_line = []
     for i in range(start, end + 1):
-        if i == end and iscircle:
-            points_line.append([end, start])
-        elif i != end:
+        if i %2==0:
+            print("woc?")
+            print(i,i+1)
             points_line.append([i, i + 1])
     return points_line
 
